@@ -58,7 +58,7 @@
 				<find><![CDATA[	'JAB_USERNAME_EXPLAIN'		=> 'Specify a registered username or a valid JID. The username will not be checked for validity. If you only specify a username, then your JID will be the username and the server you specified above. Else, specify a valid JID, for example user@jabber.org.',]]></find>
 				<action type="after-add"><![CDATA[// Start favicon_mod
 	'FAVICON_URL'				=> 'favicon',
-	'FAVICON_URL_EXPLAIN'		=> 'You can enter a relative path, so the mod will assume the files is in your forum root, or a full URL.',
+	'FAVICON_URL_EXPLAIN'		=> 'You enter a relative path, the mod starts looking from the forum root. The default favicon is located in your forum root.',
 // End favicon_mod]]></action>
 			</edit>
 		</open>
