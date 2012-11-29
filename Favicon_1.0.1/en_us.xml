@@ -23,34 +23,9 @@
 			<time>180</time>
 			<target-version>3.0.11</target-version>
 		</installation>
-		<link-group>
-			<link type="template" href="subsilver2.xml" lang="en">subsilver2.xml</link>
-			<link type="language" href="en_us.xml" lang="en">en_us</link>
-		</link-group>
 	</header>
 	<action-group>
-		<open src="includes/functions.php">
-			<edit>
-				<find><![CDATA[	// The following assigns all _common_ variables that may be used at any point in a template.]]></find>
-				<action type="before-add"><![CDATA[// START Favicon_mod
-	if (empty($config['favicon'])) 
-	{
-	set_config('favicon', '', false);
-	}
-// END 	Favicon_mod]]></action>
-			</edit>
-			<edit>
-				<find><![CDATA[		'SITENAME'						=> $config['sitename'],]]></find>
-				<action type="before-add"><![CDATA[		'FAVICON'						=> $config['favicon'],]]></action>
-			</edit>
-		</open>
-		<open src="includes/acp/acp_board.php">
-			<edit>
-				<find><![CDATA[						'legend2'				=> 'ACP_LOAD_SETTINGS',]]></find>
-				<action type="before-add"><![CDATA[						'favicon'				=> array('lang' => 'FAVICON_URL',			'validate' => 'string',	'type' => 'text:40:255', 'explain' => false),]]></action>
-			</edit>
-		</open>
-		<open src="language/en/acp/board.php">
+		<open src="language/en_us/acp/board.php">
 			<edit>
 				<find><![CDATA[	'JAB_USERNAME_EXPLAIN'		=> 'Specify a registered username or a valid JID. The username will not be checked for validity. If you only specify a username, then your JID will be the username and the server you specified above. Else, specify a valid JID, for example user@jabber.org.',]]></find>
 				<action type="after-add"><![CDATA[// Startx favicon_mod
@@ -59,12 +34,5 @@
 // End favicon_mod]]></action>
 			</edit>
 		</open>
-		<open src="styles/prosilver/template/overall_header.html">
-			<edit>
-				<find><![CDATA[<title>{SITENAME} &bull; <!-- IF S_IN_MCP -->{L_MCP} &bull; <!-- ELSEIF S_IN_UCP -->{L_UCP} &bull; <!-- ENDIF -->{PAGE_TITLE}</title>]]></find>
-				<action type="after-add"><![CDATA[<!-- IF FAVICON --><link rel="shortcut icon" href="{ROOT_PATH}{FAVICON}" type="image/x-icon" /><!-- ENDIF -->]]></action>
-			</edit>
-		</open>
-		<diy-instructions lang="en"><![CDATA[Don't forget to purge your cache.]]></diy-instructions>
 	</action-group>
 </mod>
