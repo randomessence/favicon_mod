@@ -40,8 +40,7 @@
 	{
 	set_config('favicon', 'favicon.ico', false);
 	}
-	// END 	Favicon_mod
-]]></action>
+	// END 	Favicon_mod]]></action>
 			</edit>
 			<edit>
 				<find><![CDATA[		'SITE_DESCRIPTION'				=> $config['site_desc'],]]></find>
