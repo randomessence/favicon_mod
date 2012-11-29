@@ -50,8 +50,8 @@
 		</open>
 		<open src="includes/acp/acp_board.php">
 			<edit>
-				<find><![CDATA[						'legend2'				=> 'ACP_LOAD_SETTINGS',]]></find>
-				<action type="before-add"><![CDATA[						'favicon'				=> array('lang' => 'FAVICON_URL',			'validate' => 'string',	'type' => 'text:40:255', 'explain' => false),]]></action>
+				<find><![CDATA[						'site_desc'				=> array('lang' => 'SITE_DESC',				'validate' => 'string',	'type' => 'text:40:255', 'explain' => false),]]></find>
+				<action type="after-add"><![CDATA[						'favicon'				=> array('lang' => 'FAVICON_URL',			'validate' => 'string',	'type' => 'text:40:255', 'explain' => false),]]></action>
 			</edit>
 		</open>
 		<open src="language/en/acp/board.php">
