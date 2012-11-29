@@ -35,12 +35,13 @@
 		<open src="includes/functions.php">
 			<edit>
 				<find><![CDATA[	// The following assigns all _common_ variables that may be used at any point in a template.]]></find>
-				<action type="before-add"><![CDATA[// START Favicon_mod
+				<action type="before-add"><![CDATA[	// START Favicon_mod
 	if (empty($config['favicon'])) 
 	{
 	set_config('favicon', 'favicon.ico', false);
 	}
-// END 	Favicon_mod]]></action>
+	// END 	Favicon_mod
+]]></action>
 			</edit>
 			<edit>
 				<find><![CDATA[		'SITE_DESCRIPTION'				=> $config['site_desc'],]]></find>
@@ -56,7 +57,7 @@
 		<open src="language/en/acp/board.php">
 			<edit>
 				<find><![CDATA[	'JAB_USERNAME_EXPLAIN'		=> 'Specify a registered username or a valid JID. The username will not be checked for validity. If you only specify a username, then your JID will be the username and the server you specified above. Else, specify a valid JID, for example user@jabber.org.',]]></find>
-				<action type="after-add"><![CDATA[// Startx favicon_mod
+				<action type="after-add"><![CDATA[// Start favicon_mod
 	'FAVICON_URL'				=> 'favicon',
 	'FAVICON_URL_EXPLAIN'		=> 'You can enter a relative path, so the mod will assume the files is in your forum root, or a full URL.',
 // End favicon_mod]]></action>
