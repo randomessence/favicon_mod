@@ -29,13 +29,16 @@
 		</link-group>
 	</header>
 	<action-group>
+		<copy>
+			<file from="root/*.*" to="*.*"/>
+		</copy>
 		<open src="includes/functions.php">
 			<edit>
 				<find><![CDATA[	// The following assigns all _common_ variables that may be used at any point in a template.]]></find>
 				<action type="before-add"><![CDATA[// START Favicon_mod
 	if (empty($config['favicon'])) 
 	{
-	set_config('favicon', '', false);
+	set_config('favicon', 'favicon.ico', false);
 	}
 // END 	Favicon_mod]]></action>
 			</edit>
