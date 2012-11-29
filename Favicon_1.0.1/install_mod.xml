@@ -51,7 +51,7 @@
 		<open src="includes/acp/acp_board.php">
 			<edit>
 				<find><![CDATA[						'site_desc'				=> array('lang' => 'SITE_DESC',				'validate' => 'string',	'type' => 'text:40:255', 'explain' => false),]]></find>
-				<action type="after-add"><![CDATA[						'favicon'				=> array('lang' => 'FAVICON_URL',			'validate' => 'string',	'type' => 'text:40:255', 'explain' => false),]]></action>
+				<action type="after-add"><![CDATA[						'favicon'				=> array('lang' => 'FAVICON_URL',			'validate' => 'string',	'type' => 'text:40:255', 'explain' => true),]]></action>
 			</edit>
 		</open>
 		<open src="language/en/acp/board.php">
