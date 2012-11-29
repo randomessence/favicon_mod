@@ -34,8 +34,8 @@
 		</copy>
 		<open src="includes/functions.php">
 			<edit>
-				<find><![CDATA[		'SITE_DESCRIPTION'				=> $config['site_desc'],]]></find>
-				<action type="after-add"><![CDATA[// START Favicon_mod
+				<find><![CDATA[	// The following assigns all _common_ variables that may be used at any point in a template.]]></find>
+				<action type="before-add"><![CDATA[// START Favicon_mod
 	if (empty($config['favicon'])) 
 	{
 	set_config('favicon', 'favicon.ico', false);
@@ -43,8 +43,8 @@
 // END 	Favicon_mod]]></action>
 			</edit>
 			<edit>
-				<find><![CDATA[		'SITENAME'						=> $config['sitename'],]]></find>
-				<action type="before-add"><![CDATA[		'FAVICON'						=> $config['favicon'],]]></action>
+				<find><![CDATA[		'SITE_DESCRIPTION'				=> $config['site_desc'],]]></find>
+				<action type="after-add"><![CDATA[		'FAVICON'						=> $config['favicon'],]]></action>
 			</edit>
 		</open>
 		<open src="includes/acp/acp_board.php">
